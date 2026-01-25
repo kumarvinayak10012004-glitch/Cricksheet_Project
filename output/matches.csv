@@ -1,0 +1,11 @@
+match_id,match_type,date,venue,team1,team2,winner,result
+1000851,Test,2016-11-03,Western Australia Cricket Association Ground,Australia,South Africa,South Africa,
+1000853,Test,2016-11-12,Bellerive Oval,Australia,South Africa,South Africa,
+1000855,Test,2016-11-24,Adelaide Oval,Australia,South Africa,Australia,
+1000881,Test,2016-12-15,"Brisbane Cricket Ground, Woolloongabba",Australia,Pakistan,Australia,
+1000883,Test,2016-12-26,Melbourne Cricket Ground,Australia,Pakistan,Australia,
+1000885,Test,2017-01-03,Sydney Cricket Ground,Australia,Pakistan,Australia,
+1019985,Test,2017-01-12,Basin Reserve,New Zealand,Bangladesh,New Zealand,
+1019987,Test,2017-01-20,Hagley Oval,New Zealand,Bangladesh,New Zealand,
+1019993,Test,2016-11-17,Hagley Oval,New Zealand,Pakistan,New Zealand,
+1019995,Test,2016-11-25,Seddon Park,New Zealand,Pakistan,New Zealand,
