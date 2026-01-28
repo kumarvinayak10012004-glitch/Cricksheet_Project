@@ -50,22 +50,21 @@ if show_top_batsmen:
     df = load_data(query)
 
     if df.empty:
-        st.warning("No data found in database.")  # <-- fixed closing quote
-    else:
-        # Show dataframe
-        st.dataframe(df)
+     st.warning("No data found in database.")
+else:
+    # Show dataframe
+    st.dataframe(df)
 
-        # Plot horizontal bar chart using Plotly
-        fig = px.bar(
-            df,
-            x="total_runs",
-            y="batsman",
-            orientation='h',
-            title="Top 10 Batsmen",
-            labels={"total_runs": "Total Runs", "batsman": "Batsman"}
-        )
-        fig.update_layout(yaxis=dict(autorange="reversed"))  # largest on top
-        st.plotly_chart(fig, use_container_width=True)
+    # -----------------------------
+    # Altair horizontal bar chart
+    # -----------------------------
+    import altair as alt
+    chart = alt.Chart(df).mark_bar().encode(
+        x='total_runs',
+        y=alt.Y('batsman', sort='-x')  # largest runs on top
+    ).properties(title="Top 10 Batsmen")
+    st.altair_chart(chart, use_container_width=True)
+
 
 
 
