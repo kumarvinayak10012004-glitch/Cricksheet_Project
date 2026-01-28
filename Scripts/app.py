@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 # -----------------------------
 # Page config
@@ -38,5 +38,19 @@ show_top_batsmen = st.sidebar.checkbox("Show Top Batsmen", True)
 # -----------------------------
 if show_top_batsmen:
     st.subheader("🔥 Top 10 Batsmen by Total Runs")
+
+    query = """
+    SELECT batsman, SUM(runs) AS total_runs
+    FROM balls
+    GROUP BY batsman
+    ORDER BY total_runs DESC
+    LIMIT 10;
+    """
+
+    df = load_data(query)
+
+    if df.empty:
+        st.warning("No data found in datab
+
 
 
