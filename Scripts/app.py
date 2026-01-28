@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 import streamlit as st
-import plotly.express as px
+import altair as alt  # pre-installed on Streamlit Cloud
 
 # -----------------------------
 # Page config
@@ -9,7 +9,7 @@ import plotly.express as px
 st.set_page_config(page_title="Cricket Dashboard", layout="wide")
 
 # -----------------------------
-# Database path (Cloud-friendly)
+# Database path
 # -----------------------------
 DB_PATH = "Scripts/cricsheet.db"
 
@@ -50,20 +50,19 @@ if show_top_batsmen:
     df = load_data(query)
 
     if df.empty:
-     st.warning("No data found in database.")
-else:
-    # Show dataframe
-    st.dataframe(df)
+        st.warning("No data found in database.")
+    else:
+        # Show dataframe
+        st.dataframe(df)
 
-    # -----------------------------
-    # Altair horizontal bar chart
-    # -----------------------------
-    import altair as alt
-    chart = alt.Chart(df).mark_bar().encode(
-        x='total_runs',
-        y=alt.Y('batsman', sort='-x')  # largest runs on top
-    ).properties(title="Top 10 Batsmen")
-    st.altair_chart(chart, use_container_width=True)
+        # Altair horizontal bar chart
+        chart = alt.Chart(df).mark_bar().encode(
+            x='total_runs',
+            y=alt.Y('batsman', sort='-x')  # largest on top
+        ).properties(title="Top 10 Batsmen")
+        st.altair_chart(chart, use_container_width=True)
+
+
 
 
 
