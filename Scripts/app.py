@@ -6,61 +6,37 @@ import matplotlib.pyplot as plt
 # -----------------------------
 # Page config
 # -----------------------------
-st.set_page_config(
-    page_title="Cricsheet Cricket Analytics",
-    page_icon="🏏",
-    layout="wide"
-)
-
-st.title("🏏 Cricsheet Cricket Analytics Dashboard")
+st.set_page_config(page_title="Cricket Dashboard", layout="wide")
 
 # -----------------------------
-# Database connection
+# Database path (Cloud-friendly)
 # -----------------------------
 DB_PATH = "Scripts/cricsheet.db"
 
+# -----------------------------
+# Function to load data from DB
+# -----------------------------
 @st.cache_data
 def load_data(query):
-    conn = sqlite3.connect(DB_PATH)
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        df = pd.read_sql(query, conn)
+        conn.close()
+        return df
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return pd.DataFrame()
 
 # -----------------------------
-# Sidebar
+# Sidebar options
 # -----------------------------
-st.sidebar.header("Options")
-show_top_batsmen = st.sidebar.checkbox("Show Top Batsmen", value=True)
+st.sidebar.title("Cricket Dashboard")
+show_top_batsmen = st.sidebar.checkbox("Show Top Batsmen", True)
 
 # -----------------------------
 # Top Batsmen Section
 # -----------------------------
 if show_top_batsmen:
     st.subheader("🔥 Top 10 Batsmen by Total Runs")
-
-    query = """
-    SELECT batsman, SUM(runs) AS total_runs
-    FROM balls
-    GROUP BY batsman
-    ORDER BY total_runs DESC
-    LIMIT 10;
-    """
-
-    df = load_data(query)
-
-    if df.empty:
-        st.warning("No data found in database.")
-    else:
-        st.dataframe(df)
-
-       # Plot
-fig, ax = plt.subplots()  # <-- parentheses important!
-ax.barh(df["batsman"], df["total_runs"])
-ax.set_xlabel("Total Runs")
-ax.set_ylabel("Batsman")
-ax.set_title("Top 10 Batsmen")
-ax.invert_yaxis()
-
-st.pyplot(fig)
 
 
