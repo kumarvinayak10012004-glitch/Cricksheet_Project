@@ -50,7 +50,22 @@ if show_top_batsmen:
     df = load_data(query)
 
     if df.empty:
-        st.warning("No data found in datab
+        st.warning("No data found in database.")  # <-- fixed closing quote
+    else:
+        # Show dataframe
+        st.dataframe(df)
+
+        # Plot horizontal bar chart using Plotly
+        fig = px.bar(
+            df,
+            x="total_runs",
+            y="batsman",
+            orientation='h',
+            title="Top 10 Batsmen",
+            labels={"total_runs": "Total Runs", "batsman": "Batsman"}
+        )
+        fig.update_layout(yaxis=dict(autorange="reversed"))  # largest on top
+        st.plotly_chart(fig, use_container_width=True)
 
 
 
