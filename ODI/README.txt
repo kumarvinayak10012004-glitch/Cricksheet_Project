@@ -1,5 +1,5 @@
 This zip archive contains data files from Cricsheet in JSON format. This
-archive contains 3082 ODI matches. A further 152 matches have been withheld
+archive contains 3084 ODI matches. A further 152 matches have been withheld
 due to either featuring the Afghanistan men's team or being played in the
 Afghanistan Premier League, due to the Cricsheet policy to no longer feature
 matches involving Afghanistan men or played in Afghanistan Premier League (see
@@ -26,6 +26,8 @@ as IPL). The 4th field is the gender of the players involved in the match. The
 teams involved in the match.
 
 
+2026-01-24 - international - ODI - male - 1507717 - Sri Lanka vs England
+2026-01-22 - international - ODI - male - 1507716 - Sri Lanka vs England
 2026-01-18 - international - ODI - male - 1490233 - New Zealand vs India
 2026-01-14 - international - ODI - male - 1490232 - India vs New Zealand
 2026-01-11 - international - ODI - male - 1490231 - New Zealand vs India

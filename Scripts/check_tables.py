@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect("cricsheet.db")
 cur = conn.cursor()
 
-tables = ["matches", "balls"]
+tables = ["match_runs", "top_scorers"]
 
 for table in tables:
     cur.execute(f"SELECT COUNT(*) FROM {table}")

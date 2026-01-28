@@ -1,5 +1,5 @@
 This zip archive contains data files from Cricsheet in JSON format. This
-archive contains 4923 T20 matches. A further 152 matches have been withheld
+archive contains 4945 T20 matches. A further 154 matches have been withheld
 due to either featuring the Afghanistan men's team or being played in the
 Afghanistan Premier League, due to the Cricsheet policy to no longer feature
 matches involving Afghanistan men or played in Afghanistan Premier League (see
@@ -26,6 +26,28 @@ as IPL). The 4th field is the gender of the players involved in the match. The
 teams involved in the match.
 
 
+2026-01-26 - international - T20 - female - 1519150 - Malaysia vs Hong Kong
+2026-01-26 - international - T20 - female - 1515227 - Netherlands vs Thailand
+2026-01-26 - international - T20 - female - 1515226 - Namibia vs Ireland
+2026-01-26 - international - T20 - female - 1515225 - Papua New Guinea vs United States of America
+2026-01-26 - international - T20 - female - 1515224 - Scotland vs Nepal
+2026-01-25 - international - T20 - male - 1519137 - Ireland vs Italy
+2026-01-25 - international - T20 - male - 1490236 - New Zealand vs India
+2026-01-25 - international - T20 - female - 1519149 - Hong Kong vs Bhutan
+2026-01-24 - international - T20 - female - 1519148 - Malaysia vs Bhutan
+2026-01-24 - international - T20 - female - 1515223 - Bangladesh vs Ireland
+2026-01-24 - international - T20 - female - 1515222 - Zimbabwe vs Nepal
+2026-01-24 - international - T20 - female - 1515221 - Namibia vs Papua New Guinea
+2026-01-24 - international - T20 - female - 1515220 - Thailand vs Scotland
+2026-01-23 - international - T20 - male - 1519136 - Italy vs Ireland
+2026-01-23 - international - T20 - male - 1490235 - New Zealand vs India
+2026-01-22 - international - T20 - female - 1519147 - Hong Kong vs Bhutan
+2026-01-22 - international - T20 - female - 1515219 - Zimbabwe vs Scotland
+2026-01-22 - international - T20 - female - 1515218 - Bangladesh vs Namibia
+2026-01-22 - international - T20 - female - 1515217 - Netherlands vs Nepal
+2026-01-22 - international - T20 - female - 1515216 - Ireland vs United States of America
+2026-01-21 - international - T20 - male - 1490234 - India vs New Zealand
+2026-01-21 - international - T20 - female - 1519146 - Hong Kong vs Malaysia
 2026-01-20 - international - T20 - female - 1519145 - Malaysia vs Bhutan
 2026-01-20 - international - T20 - female - 1515215 - Namibia vs United States of America
 2026-01-20 - international - T20 - female - 1515214 - Netherlands vs Scotland
