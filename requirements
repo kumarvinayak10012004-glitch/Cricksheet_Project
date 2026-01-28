@@ -1,0 +1,14 @@
+selenium
+webdriver-manager
+requests
+tqdm
+pandas
+numpy
+sqlalchemy
+pydantic
+python-dateutil
+sqlite-utils
+matplotlib
+seaborn
+plotly
+jupyter
